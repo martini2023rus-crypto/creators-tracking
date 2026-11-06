@@ -1,0 +1,202 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Итоги недели 45 · Дубай · трекинг CREATORS</title><style>
+:root{
+  --bg:#0f1622; --card:#182231; --card2:#1f2b3d; --line:#2c3a50;
+  --text:#ffffff; --text2:#c9cdd6; --text3:#8e97a8;
+  --accent:#e8b75a; --good:#3ccf7e; --warn:#f2b632; --crit:#ef5a5a; --blue:#4f9cf0;
+}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:Arial,"Liberation Sans","DejaVu Sans",sans-serif;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.slide{width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--bg);
+  padding:54px 84px 0;page-break-after:always;break-after:page;display:flex;flex-direction:column}
+.slide:last-child{page-break-after:auto;break-after:auto}
+.slide>*{position:relative;z-index:1}
+.glow{position:absolute!important;z-index:0!important;border-radius:50%;pointer-events:none}
+.glow.g1{right:-180px;top:-180px;width:560px;height:560px;background:radial-gradient(circle,rgba(232,183,90,.17),rgba(232,183,90,0) 70%)}
+.glow.g2{left:-220px;bottom:-260px;width:640px;height:640px;background:radial-gradient(circle,rgba(79,156,240,.10),rgba(79,156,240,0) 70%)}
+.kicker{color:var(--accent);font-size:24px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.kicker .pg{color:var(--text3);margin-left:14px}
+h1{margin:10px 0 8px;font-size:58px;line-height:1.08;font-weight:800;max-width:1600px}
+.sub{color:var(--text2);font-size:29px;margin:0 0 28px;max-width:1650px;line-height:1.3}
+.body{flex:1;display:flex;flex-direction:column;gap:24px;min-height:0}
+.joke{margin:18px 0 0;background:linear-gradient(90deg,rgba(232,183,90,.22),rgba(232,183,90,.06));
+  border-left:8px solid var(--accent);border-radius:14px;padding:18px 30px;font-size:30px;line-height:1.3;color:#fff7e6;overflow:hidden}
+.joke b{color:var(--accent)}
+.foot{height:66px;display:flex;align-items:center;justify-content:space-between;color:var(--text3);font-size:19px}
+b{font-weight:700;color:#fff}
+.kpis{display:grid;gap:22px}
+.kpi{background:var(--card);border-radius:18px;padding:22px 26px;position:relative;overflow:hidden}
+.kpi::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--line);transform-origin:left}
+.kpi .lab{color:var(--text2);font-size:27px;line-height:1.25}
+.kpi .val{font-size:80px;font-weight:800;line-height:1.05;margin:8px 0 4px;white-space:nowrap}
+.kpi .note{color:var(--text3);font-size:24px;line-height:1.3}
+.kpi.t-good::before{background:var(--good)} .t-good .val{color:var(--good)}
+.kpi.t-warn::before{background:var(--warn)} .t-warn .val{color:var(--warn)}
+.kpi.t-crit::before{background:var(--crit)} .t-crit .val{color:var(--crit)}
+.kpi.t-accent::before{background:var(--accent)} .t-accent .val{color:var(--accent)}
+.t-muted .val{color:var(--text2)}
+.box{background:var(--card);border-radius:18px;padding:24px 30px}
+.box h3{margin:0 0 16px;font-size:34px;color:var(--accent);font-weight:700}
+ul.b{margin:0;padding:0;list-style:none}
+ul.b li{position:relative;padding-left:38px;font-size:30px;line-height:1.3;margin:0 0 14px}
+ul.b li::before{content:"";position:absolute;left:4px;top:15px;width:16px;height:16px;border-radius:50%;background:var(--accent)}
+ul.b li.good::before{background:var(--good)} ul.b li.warn::before{background:var(--warn)}
+ul.b li.crit::before{background:var(--crit)} ul.b li.muted::before{background:var(--text3)}
+table{border-collapse:collapse;width:100%;font-size:27px;line-height:1.28}
+th{color:var(--text3);font-weight:600;text-align:left;padding:10px 14px;border-bottom:2px solid var(--line);font-size:23px;text-transform:uppercase;letter-spacing:.04em}
+td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.dense{font-size:24px} table.dense td{padding:11px 14px}
+td.good{color:var(--good);font-weight:700} td.warn{color:var(--warn);font-weight:700}
+td.crit{color:var(--crit);font-weight:700} td.accent{color:var(--accent);font-weight:700} td.muted{color:var(--text3)}
+.funnel{display:flex;flex-direction:column;gap:16px}
+.frow{display:grid;grid-template-columns:300px 1fr 170px;align-items:center;gap:22px}
+.frow .fl{font-size:29px;color:var(--text2)}
+.frow .bar{height:60px;background:var(--card2);border-radius:12px;position:relative;overflow:hidden}
+.frow .bar .prev{position:absolute;left:0;top:0;bottom:0;background:rgba(79,156,240,.35);border-right:3px dashed #9cc8ff}
+.frow .bar .cur{position:absolute;left:0;top:14px;bottom:14px;background:var(--accent);border-radius:0 8px 8px 0}
+.frow .fv{font-size:50px;font-weight:800;text-align:right;white-space:nowrap}
+.frow .fv small{display:block;font-size:22px;color:var(--text3);font-weight:500}
+.legend{display:flex;gap:30px;color:var(--text3);font-size:21px;margin-top:4px}
+.legend i{display:inline-block;width:26px;height:16px;border-radius:4px;margin-right:8px;vertical-align:middle}
+.cards{display:grid;gap:24px;flex:1;align-content:stretch}
+.card{background:var(--card);border-radius:18px;padding:22px 26px;border-left:7px solid var(--line)}
+.card h4{margin:0 0 10px;font-size:32px;line-height:1.2}
+.card p{margin:0;font-size:26px;line-height:1.36;color:var(--text2)}
+.card.t-good{border-left-color:var(--good)} .card.t-warn{border-left-color:var(--warn)}
+.card.t-crit{border-left-color:var(--crit)} .card.t-accent{border-left-color:var(--accent)}
+.cols{display:grid;gap:26px;min-height:0;flex:1}
+.note{color:var(--text3);font-size:25px;line-height:1.3}
+.nav{display:none}
+
+@media screen{
+html:not(.measure),html:not(.measure) body{height:100%;overflow:hidden}
+html:not(.measure) .stage{position:fixed;left:0;right:0;top:0;bottom:58px;cursor:pointer}
+html:not(.measure) .slide{position:absolute;left:50%;top:50%;margin:0;
+  transform:translate(-50%,-50%) scale(var(--k,.5));opacity:0;visibility:hidden;
+  transition:opacity .55s ease,visibility 0s linear .55s;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+html:not(.measure) .slide.active{opacity:1;visibility:visible;transition:opacity .55s ease}
+html:not(.measure) .nav{display:flex;position:fixed;left:0;right:0;bottom:0;height:58px;align-items:center;gap:14px;
+  padding:0 18px;background:rgba(10,15,24,.92);border-top:1px solid var(--line);z-index:5;font-size:15px}
+.nav button,.nav a{background:var(--card2);color:var(--text);border:1px solid var(--line);border-radius:10px;
+  height:38px;min-width:42px;padding:0 14px;font:inherit;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.nav button:hover,.nav a:hover{border-color:var(--accent);color:var(--accent)}
+.nav .prog{flex:1;height:6px;background:var(--card2);border-radius:3px;overflow:hidden}
+.nav .prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#ffd98a);transition:width .6s cubic-bezier(.2,.7,.2,1)}
+.nav .cnt{color:var(--text2);min-width:56px;text-align:center;font-variant-numeric:tabular-nums}
+.nav .title{color:var(--text3);max-width:34vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* light motion: things rise, grow and flow */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-34px)}to{opacity:1;transform:none}}
+@keyframes grow{from{width:0}}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes drift1{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-140px,90px) scale(1.15)}100%{transform:translate(-40px,200px) scale(.95)}}
+@keyframes drift2{0%{transform:translate(0,0) scale(1)}50%{transform:translate(160px,-80px) scale(1.2)}100%{transform:translate(60px,-180px) scale(1)}}
+@keyframes flow{from{background-position:0 0}to{background-position:56px 0}}
+@keyframes shine{from{transform:translateX(-120%)}to{transform:translateX(320%)}}
+html:not(.measure) .glow.g1{animation:drift1 16s ease-in-out infinite alternate}
+html:not(.measure) .glow.g2{animation:drift2 19s ease-in-out infinite alternate}
+html:not(.measure) .play .a{animation:rise .75s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*85ms + 120ms)}
+html:not(.measure) .play tr.a,html:not(.measure) .play li.a{animation-name:slideIn}
+html:not(.measure) .play .kpi::before{animation:draw .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*85ms + 380ms)}
+html:not(.measure) .play .frow .prev{animation:grow 1.1s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*85ms + 200ms)}
+html:not(.measure) .play .frow .cur{animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*85ms + 520ms)}
+html:not(.measure) .frow .cur{background:repeating-linear-gradient(115deg,#e8b75a 0 18px,#f3cc7c 18px 28px);background-size:56px 100%;
+  animation:flow 1.6s linear infinite}
+html:not(.measure) .play .frow .cur{animation:grow 1.4s cubic-bezier(.2,.7,.2,1) both,flow 1.6s linear infinite;
+  animation-delay:calc(var(--i,0)*85ms + 520ms),0s}
+html:not(.measure) .joke{position:relative}
+html:not(.measure) .joke::after{content:"";position:absolute;top:0;bottom:0;left:0;width:30%;
+  background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,236,190,.28),rgba(255,255,255,0));transform:translateX(-120%)}
+html:not(.measure) .play .joke::after{animation:shine 1.6s ease-in-out both;animation-delay:calc(var(--i,0)*85ms + 700ms)}
+@media (prefers-reduced-motion:reduce){html:not(.measure) *{animation:none!important;transition:none!important}}
+
+/* phone: slides become a scrolling column */
+@media (max-width:900px){
+html:not(.measure),html:not(.measure) body{height:auto;overflow:auto}
+html:not(.measure) .stage{position:static;cursor:auto}
+html:not(.measure) .slide{position:relative;left:auto;top:auto;transform:none;width:auto;height:auto;opacity:1;
+  visibility:visible;padding:22px 16px 6px;display:block;border-radius:0;box-shadow:none;border-bottom:1px solid var(--line)}
+html:not(.measure) .glow{display:none}
+html:not(.measure) .kicker{font-size:11px} html:not(.measure) h1{font-size:25px;margin:6px 0} html:not(.measure) .sub{font-size:15px;margin:0 0 14px}
+html:not(.measure) .body{gap:12px}
+html:not(.measure) .kpis{grid-template-columns:1fr 1fr!important;gap:10px}
+html:not(.measure) .kpi{padding:12px 14px;border-radius:12px} html:not(.measure) .kpi::before{height:4px}
+html:not(.measure) .kpi .lab{font-size:13px} html:not(.measure) .kpi .val{font-size:30px;margin:4px 0 2px;white-space:normal} html:not(.measure) .kpi .note{font-size:12px}
+html:not(.measure) .box{padding:14px;border-radius:12px} html:not(.measure) .box h3{font-size:17px;margin-bottom:10px}
+html:not(.measure) ul.b li{font-size:15px;padding-left:22px;margin-bottom:8px}
+html:not(.measure) ul.b li::before{width:9px;height:9px;top:6px;left:2px}
+html:not(.measure) table,html:not(.measure) table.dense{font-size:12.5px} html:not(.measure) th{font-size:10px;padding:6px 5px}
+html:not(.measure) td,html:not(.measure) table.dense td{padding:7px 5px}
+html:not(.measure) .cols,html:not(.measure) .cards{grid-template-columns:1fr!important;gap:12px}
+html:not(.measure) .cols>div{gap:12px!important}
+html:not(.measure) .card{padding:12px 14px;border-radius:12px;border-left-width:5px}
+html:not(.measure) .card h4{font-size:17px;margin-bottom:6px} html:not(.measure) .card p{font-size:14px}
+html:not(.measure) .frow{grid-template-columns:96px 1fr 64px;gap:8px}
+html:not(.measure) .frow .fl{font-size:13px} html:not(.measure) .frow .bar{height:28px;border-radius:7px}
+html:not(.measure) .frow .bar .cur{top:6px;bottom:6px} html:not(.measure) .frow .fv{font-size:22px} html:not(.measure) .frow .fv small{font-size:10px}
+html:not(.measure) .legend{font-size:11px;gap:12px} html:not(.measure) .legend i{width:14px;height:9px}
+html:not(.measure) .note{font-size:12px}
+html:not(.measure) .joke{font-size:15px;padding:12px 14px;border-left-width:5px;border-radius:10px;margin-top:12px}
+html:not(.measure) .foot{height:auto;flex-direction:column;align-items:flex-start;gap:2px;font-size:11px;padding:10px 0 12px}
+html:not(.measure) .nav{position:sticky;top:0;bottom:auto;height:48px;gap:8px;padding:0 10px;font-size:13px}
+html:not(.measure) .nav .prev,html:not(.measure) .nav .next,html:not(.measure) .nav .fs,html:not(.measure) .nav .title{display:none}
+.nav button,.nav a{height:32px;padding:0 10px}
+html:not(.measure) .stage{padding-bottom:20px}
+}
+}
+</style></head><body><nav class="nav"><a href="../" title="Все презентации">☰ Все</a><button class="prev" title="Назад (←)">‹</button><div class="prog"><i></i></div><span class="cnt">1 / 7</span><button class="next" title="Дальше (→)">›</button><span class="title">Итоги недели 45 · Дубай · трекинг CREATORS</span><a href="week-45.pdf" download title="Скачать PDF">PDF ↓</a><button class="fs" title="Во весь экран (F)">⛶</button></nav><main class="stage"><section class="slide" id="s1"><div class="glow g1"></div><div class="glow g2"></div><div class="kicker a">Неделя 45 · 31.10–06.11 · трекинг CREATORS<span class="pg">1 / 7</span></div><h1 class="a">34 письма, 5 предложений, 0 встреч — пока</h1><p class="sub a">Цель спринта: назначить встречи с тремя партнёрами до 20.11 и провести их в поездке 5–14 декабря.</p><div class="body"><div class="kpis" style="grid-template-columns:repeat(4,1fr)"><div class="kpi a t-accent"><div class="lab">Написали компаниям</div><div class="val cnt-up">34</div><div class="note">неделю назад — 23</div></div><div class="kpi a t-good"><div class="lab">Ответили</div><div class="val cnt-up">16</div><div class="note">неделю назад — 7</div></div><div class="kpi a t-good"><div class="lab">Прислали условия</div><div class="val cnt-up">5</div><div class="note">неделю назад — 3</div></div><div class="kpi a t-crit"><div class="lab">Встреч назначено</div><div class="val cnt-up">0 из 3</div><div class="note">до срока 20.11 — 14 дней</div></div></div><div class="box"><h3 class="a">Главное за неделю</h3><ul class="b"><li class="a warn">Условия прислали <b>5 компаний</b> — ни одна пока не подошла</li><li class="a warn">Созвонов <b>3</b>: дважды никто не пришёл, один разговор состоялся</li><li class="a crit">Письма отелям и отклики на вакансии — <b>перенесены</b> на неделю 46</li><li class="a good">Новое: сегодня созвон с <b>Бахрейном</b>, совет изучить <b>Оман</b></li></ul></div></div><div class="joke a">Цель — три встречи в Дубае. Пока ноль встреч и 34 компании, которые знают о нас больше, чем мы о них.</div><div class="foot"><span>Максим · цель — 3 встречи в Дубае, поездка 5–14 декабря</span><span>таблица «3.21 ОАЭ — Ледокол» на 06.11 · итоги дня 02–05.11</span></div></section><section class="slide" id="s2"><div class="glow g1"></div><div class="glow g2"></div><div class="kicker a">Неделя 45 · 31.10–06.11 · трекинг CREATORS<span class="pg">2 / 7</span></div><h1 class="a">План и факт: что обещал — что вышло</h1><p class="sub a">Пункты ежедневных планов недели в группе. Зелёный — сделано, жёлтый — частично, красный — нет.</p><div class="body"><div class="box"><table><colgroup><col style="width:34%"><col style="width:50%"><col style="width:16%"></colgroup><thead><tr class="a"><th>Обещал</th><th>Что вышло</th><th>Итог</th></tr></thead><tbody><tr class="a"><td class="">Добрать КП от компаний по персоналу</td><td class="">Новые условия: Beutics, школа Nuad, найм TASC; всего с условиями 5 вместо 3</td><td class="warn">частично</td></tr><tr class="a"><td class="">Созвоны с компаниями</td><td class="">3 подключения: дважды никто не пришёл, 1 разговор с агентством подбора</td><td class="warn">частично</td></tr><tr class="a"><td class="">Командное собрание</td><td class="">Провели 04.11: новый порядок работы с компаниями, вопросы юристу</td><td class="good">сделано</td></tr><tr class="a"><td class="">10 писем руководителям спа в отелях</td><td class="">0 писем — перенёс на неделю 46, пока дорабатываем КП</td><td class="crit">нет</td></tr><tr class="a"><td class="">Отклик на управляющего салонами PRO Nails &amp; Beauty</td><td class="">Не отправлен</td><td class="crit">нет</td></tr><tr class="a"><td class="">2 отклика в отели Accor (спа)</td><td class="">Правили 2 резюме на английском, откликов 0</td><td class="crit">нет</td></tr></tbody></table></div></div><div class="joke a">Резюме для Accor переписывали так старательно, что оно скоро пройдёт собеседование без меня.</div><div class="foot"><span>Максим · цель — 3 встречи в Дубае, поездка 5–14 декабря</span><span>сообщения «План» и «Факт» 02–05.11 · TickTick</span></div></section><section class="slide" id="s3"><div class="glow g1"></div><div class="glow g2"></div><div class="kicker a">Неделя 45 · 31.10–06.11 · трекинг CREATORS<span class="pg">3 / 7</span></div><h1 class="a">Воронка: ответов вдвое больше, встреч — 0</h1><p class="sub a">36 компаний в работе: персонал, выездной массаж, спа-операторы в ОАЭ.</p><div class="body"><div class="cols" style="grid-template-columns:1.55fr 1fr"><div style="display:flex;flex-direction:column;gap:24px;min-width:0"><div class="box"><div class="funnel"><div class="frow a"><div class="fl">Написали</div><div class="bar"><div class="prev" style="width:67.6%"></div><div class="cur" style="width:100.0%"></div></div><div class="fv"><span class="cnt-up">34</span><small>было 23 · +11</small></div></div><div class="frow a"><div class="fl">Ответили</div><div class="bar"><div class="prev" style="width:20.6%"></div><div class="cur" style="width:47.1%"></div></div><div class="fv"><span class="cnt-up">16</span><small>было 7 · +9</small></div></div><div class="frow a"><div class="fl">Прислали условия</div><div class="bar"><div class="prev" style="width:8.8%"></div><div class="cur" style="width:14.7%"></div></div><div class="fv"><span class="cnt-up">5</span><small>было 3 · +2</small></div></div><div class="frow a"><div class="fl">Встреча назначена</div><div class="bar"><div class="prev" style="width:0.0%"></div><div class="cur" style="width:0.0%"></div></div><div class="fv"><span class="cnt-up">0</span><small>было 0 · +0</small></div></div></div><div class="legend a"><span><i style="background:var(--accent)"></i>на 06.11</span><span><i style="background:rgba(79,156,240,.5)"></i>на 02.11 (итог недели 44)</span></div></div></div><div style="display:flex;flex-direction:column;gap:24px;min-width:0"><div class="box"><h3 class="a">Кто что ответил</h3><ul class="b"><li class="a good"><b>5</b> прислали условия</li><li class="a warn"><b>11</b> ответили без цен: просят данные компании, звонок или почту на домене компании</li><li class="a muted"><b>18</b> молчат</li><li class="a crit"><b>1</b> отказ: у них мастера только с Филиппин</li><li class="a crit">Отели: в базе <b>142</b>, писем пока <b>0</b></li></ul></div></div></div></div><div class="joke a">18 компаний молчат. Мы называем это «долгая пауза в переговорах» — звучит солиднее, чем «игнор».</div><div class="foot"><span>Максим · цель — 3 встречи в Дубае, поездка 5–14 декабря</span><span>таблица «3.21 ОАЭ — Ледокол», листы «Конкуренты» и «Отели», 06.11</span></div></section><section class="slide" id="s4"><div class="glow g1"></div><div class="glow g2"></div><div class="kicker a">Неделя 45 · 31.10–06.11 · трекинг CREATORS<span class="pg">4 / 7</span></div><h1 class="a">Пять предложений — и почему пока ни одно</h1><p class="sub a">Дирхамы пересчитаны в баты по курсу 04.11: 9,19 бата за дирхам.</p><div class="body"><div class="box"><table class="dense"><colgroup><col style="width:16%"><col style="width:30%"><col style="width:30%"><col style="width:24%"></colgroup><thead><tr class="a"><th>Компания</th><th>Что предлагают</th><th>Деньги</th><th>Почему пока нет</th></tr></thead><tbody><tr class="a"><td class="accent">TASC</td><td class="">Наймут мастеров к себе и оформят под свою визу</td><td class="">Зарплата от 2 200 AED (≈20 200 ฿) в месяц, договор от 1 года</td><td class="">Полный расчёт ещё ждём; год — долго для пилота</td></tr><tr class="a"><td class="accent">Global Spa Talent</td><td class="">Только подбор; визу и жильё делает работодатель</td><td class="">1 350 $ за мастера, зарплата от 650 $, выход ~ через 6 недель</td><td class="">Виза, жильё и страховка — на нас</td></tr><tr class="a"><td class="accent">Nuad Thai School</td><td class="">Только подбор</td><td class="">250 $ на старте и 250 $ после оффера</td><td class="">Визу делает работодатель</td></tr><tr class="a"><td class="accent">Beutics</td><td class="">Выездные мастера: 2 по 12 часов, 12 дней в месяц</td><td class="">90 000 AED (≈827 300 ฿) в месяц без налогов</td><td class="">Слишком дорого; просим расчёт на 8 часов</td></tr><tr class="a"><td class="accent">Zynk</td><td class="">Мастер едет к клиенту</td><td class="">299–519 AED (≈2 750–4 770 ฿) за сеанс 60–120 минут, скидок нет</td><td class="">Это цена для клиента, не для партнёра</td></tr></tbody></table></div><div class="note a">Ещё один созвон 04.11 — агентство подбора: комиссия равна месячной зарплате нанятого мастера, визы не оформляет, ждёт наши требования и бюджет.</div></div><div class="joke a">Beutics хочет 90 000 дирхамов в месяц. Мы спрашивали цену мастеров, а не цену всего спа вместе с бассейном.</div><div class="foot"><span>Максим · цель — 3 встречи в Дубае, поездка 5–14 декабря</span><span>ответы компаний в таблице «Ледокол» и КП в папке «3.21 ОАЭ»</span></div></section><section class="slide" id="s5"><div class="glow g1"></div><div class="glow g2"></div><div class="kicker a">Неделя 45 · 31.10–06.11 · трекинг CREATORS<span class="pg">5 / 7</span></div><h1 class="a">Что узнали за неделю</h1><p class="sub a">Четыре вывода, которые меняют план на неделю 46.</p><div class="body"><div class="cards" style="grid-template-columns:repeat(2,1fr)"><div class="card a t-accent"><h4>Рынок делится на два лагеря</h4><p>«Подбор» — дёшево, но виза, жильё и страховка на нас. «Аренда мастеров» — всё включено, но 8 000 AED (≈73 500 ฿) за день двух мастеров. Середина — найм под чужую визу — пока одна: TASC.</p></div><div class="card a t-crit"><h4>Gmail не работает</h4><p>11 компаний из 16 ответивших цен не дали: просят название компании, сайт, звонок или почту на домене. Без корпоративной почты и карточки компании дальше «Hi» не уйти.</p></div><div class="card a t-warn"><h4>Созвоны срываются</h4><p>С одной компанией подключался дважды — никто не пришёл. Новое правило: за час до звонка подтверждаем конкретного человека, иначе не подключаемся.</p></div><div class="card a t-good"><h4>Отели — нетронутый запас</h4><p>В базе 142 отеля, писем пока 0. LinkedIn медленный: 7 приглашений руководителям спа, разговоров 0; бесплатно — только 3 записки в месяц.</p></div></div></div><div class="joke a">Открытие недели: письмо с Gmail в Дубае — как прийти на переговоры в шлёпанцах. Выслушают вежливо, но условий не дадут.</div><div class="foot"><span>Максим · цель — 3 встречи в Дубае, поездка 5–14 декабря</span><span>переписка с компаниями, LinkedIn — таблица «Ледокол», 06.11</span></div></section><section class="slide" id="s6"><div class="glow g1"></div><div class="glow g2"></div><div class="kicker a">Неделя 45 · 31.10–06.11 · трекинг CREATORS<span class="pg">6 / 7</span></div><h1 class="a">Команда и новые направления</h1><p class="sub a">Четыре человека ведут компании, баллы — за каждый шаг переговоров. Итог — в понедельник.</p><div class="body"><div class="kpis" style="grid-template-columns:repeat(3,1fr)"><div class="kpi a t-warn"><div class="lab">Баллы команды на вечер 05.11</div><div class="val cnt-up">42 %</div><div class="note">459 из 1 080</div></div><div class="kpi a t-good"><div class="lab">Неделя 44</div><div class="val cnt-up">101 %</div><div class="note">584 из 580</div></div><div class="kpi a t-accent"><div class="lab">Компаний у команды</div><div class="val cnt-up">54</div><div class="note">было 29: добавили отели и спа</div></div></div><div class="cards" style="grid-template-columns:repeat(4,1fr)"><div class="card a t-good"><h4>Бахрейн</h4><p>Сегодня созвон с компанией из Бахрейна — первая точка вне ОАЭ.</p></div><div class="card a t-accent"><h4>Оман</h4><p>В базе 22 салона и 7 компаний по персоналу. Эксперт по предиктивной аналитике советует изучать параллельно.</p></div><div class="card a t-warn"><h4>Открытие компании</h4><p>Собрали 26 юристов и бухгалтеров в ОАЭ. Переговоров пока нет.</p></div><div class="card a t-warn"><h4>Свой человек в Дубае</h4><p>Вакансия менеджера по развитию готова, ещё не опубликована.</p></div></div></div><div class="joke a">Прошлая неделя — 101 %, эта — 42 %. Мы не расслабились: просто баллы теперь дают за ответы компаний, а не за красиво заполненные клеточки.</div><div class="foot"><span>Максим · цель — 3 встречи в Дубае, поездка 5–14 декабря</span><span>лист «00 Баллы» таблицы «Ледокол», обновлён 05.11 в 23:34</span></div></section><section class="slide" id="s7"><div class="glow g1"></div><div class="glow g2"></div><div class="kicker a">Неделя 45 · 31.10–06.11 · трекинг CREATORS<span class="pg">7 / 7</span></div><h1 class="a">Неделя 46: от переписки — к встречам</h1><p class="sub a">До 20.11 — 14 дней. Нужно 3 назначенные встречи, сейчас 0.</p><div class="body"><div class="cols" style="grid-template-columns:1.25fr 1fr"><div style="display:flex;flex-direction:column;gap:24px;min-width:0"><div class="box"><h3 class="a">Гипотезы до 13.11</h3><ul class="b"><li class="a accent">Если написать 16 ответившим компаниям с почты на домене и приложить карточку компании, то к 13.11 получим <b>3 новых КП</b></li><li class="a accent">Если отправить <b>10 писем</b> руководителям спа в отелях, то к 13.11 получим 2 ответа и <b>1 созвон</b></li><li class="a accent">Если за час до звонка подтверждать собеседника, то к 13.11 пройдут <b>2 созвона без срывов</b></li></ul></div></div><div style="display:flex;flex-direction:column;gap:24px;min-width:0"><div class="box"><h3 class="a">Задачи</h3><ul class="b"><li class="a ">Почта на домене и карточка компании для переписки</li><li class="a ">10 писем руководителям спа в отелях</li><li class="a ">2 отклика в Accor и отклик в PRO Nails &amp; Beauty</li><li class="a ">Итоги созвона с Бахрейном</li><li class="a ">Оман: одна страница сравнения с ОАЭ</li></ul></div></div></div></div><div class="joke a">План на неделю 46: меньше Gmail, больше Дубая. И созвоны только с теми, кто доказал, что существует.</div><div class="foot"><span>Максим · цель — 3 встречи в Дубае, поездка 5–14 декабря</span><span>план недели 46</span></div></section></main><script>
+(function(){
+var H=document.documentElement,mode=location.hash.slice(1);
+if(mode==='print'||mode==='measure'){H.classList.add('measure');}
+var still=H.classList.contains('measure')||(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+var slides=[].slice.call(document.querySelectorAll('.slide'));
+slides.forEach(function(s){var i=0;s.querySelectorAll('.a').forEach(function(e){e.style.setProperty('--i',i++);});});
+var NUM=/^(\d+(?:[ \u00a0]\d{3})*)/;
+document.querySelectorAll('.cnt-up').forEach(function(e){e.setAttribute('data-final',e.innerHTML);});
+function fmt(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,'\u00a0');}
+function count(e,delay){var f=e.getAttribute('data-final'),m=f.match(NUM);if(!m)return;
+  var target=parseInt(m[1].replace(/\D/g,''),10),rest=f.slice(m[1].length);e.innerHTML='0'+rest;
+  setTimeout(function(){var t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/1100);p=1-Math.pow(1-p,3);
+    e.innerHTML=fmt(Math.round(target*p))+rest;if(p<1)requestAnimationFrame(step);else e.innerHTML=f;}requestAnimationFrame(step);},delay);}
+function play(s){if(still)return;s.classList.remove('play');void s.offsetWidth;s.classList.add('play');
+  s.querySelectorAll('.cnt-up').forEach(function(e){var host=e.closest('.a');var i=host?parseFloat(host.style.getPropertyValue('--i'))||0:0;count(e,250+i*85);});}
+function finish(){document.querySelectorAll('.cnt-up').forEach(function(e){e.innerHTML=e.getAttribute('data-final');});}
+window.addEventListener('beforeprint',finish);
+if(mode==='measure'){var bad=[];slides.forEach(function(s,i){
+  var b=s.querySelector('.body'),j=s.querySelector('.joke'),h=s.querySelector('h1'),lim=j?j.getBoundingClientRect().top:s.getBoundingClientRect().bottom,m=0;
+  b.querySelectorAll('*').forEach(function(e){var r=e.getBoundingClientRect();if(r.height>0&&r.bottom>m)m=r.bottom;});
+  if(m>lim+1||b.scrollWidth>b.clientWidth+2||(h&&h.getBoundingClientRect().height>100))bad.push(i+1);});
+  document.body.setAttribute('data-overflow',bad.join(','));}
+if(H.classList.contains('measure'))return;
+var phone=window.matchMedia('(max-width: 900px)'),cur=0,prog=document.querySelector('.nav .prog i'),cnt=document.querySelector('.nav .cnt');
+function fit(){H.style.setProperty('--k',Math.min(innerWidth/1920,(innerHeight-58)/1080)*0.97);}
+function show(n){n=Math.max(0,Math.min(slides.length-1,n));slides.forEach(function(s,i){s.classList.toggle('active',i===n);});
+  cur=n;play(slides[n]);if(prog)prog.style.width=(100*(n+1)/slides.length)+'%';if(cnt)cnt.textContent=(n+1)+' / '+slides.length;
+  try{history.replaceState(null,'','#'+(n+1));}catch(e){}}
+function go(d){if(!phone.matches)show(cur+d);}
+var start=parseInt(mode,10);start=isNaN(start)?0:start-1;
+if(phone.matches&&'IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting&&!en.target.dataset.seen){en.target.dataset.seen=1;play(en.target);}});},{threshold:.25});
+  slides.forEach(function(s){io.observe(s);});
+  if(start>0&&slides[start])setTimeout(function(){slides[start].scrollIntoView();},50);
+}else{fit();show(start);}
+addEventListener('resize',function(){if(!phone.matches){fit();if(!slides[cur].classList.contains('active'))show(cur);}});
+addEventListener('keydown',function(e){var k=e.key;
+  if(k==='ArrowRight'||k==='PageDown'||k===' '||k==='Enter'){e.preventDefault();go(1);}
+  else if(k==='ArrowLeft'||k==='PageUp'||k==='Backspace'){e.preventDefault();go(-1);}
+  else if(k==='Home'){show(0);}else if(k==='End'){show(slides.length-1);}
+  else if(k==='f'||k==='F'||k==='а'||k==='А'){fs();}});
+function fs(){if(!document.fullscreenElement){(H.requestFullscreen||function(){}).call(H);}else{document.exitFullscreen();}}
+var st=document.querySelector('.stage');
+st.addEventListener('click',function(e){if(phone.matches||e.target.closest('a'))return;go(e.clientX<innerWidth/3?-1:1);});
+var x0=null;st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+st.addEventListener('touchend',function(e){if(x0===null||phone.matches)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)go(dx<0?1:-1);x0=null;});
+var b;if((b=document.querySelector('.nav .prev')))b.onclick=function(){go(-1);};
+if((b=document.querySelector('.nav .next')))b.onclick=function(){go(1);};
+if((b=document.querySelector('.nav .fs')))b.onclick=fs;
+})();
+</script></body></html>
